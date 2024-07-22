@@ -78,7 +78,6 @@ from monthly_revenue
 order by order_month;
 
 --Top 20 average Order Value by Customer Location (City):
-select * from amz_sales;
 with avg_price_citywise as (
     select ship_city, DATE_TRUNC('month', date) AS order_month,
 		sum(price * qty) as total_order_value    
